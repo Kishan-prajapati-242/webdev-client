@@ -6,23 +6,22 @@ export default function HeadingTags() {
         Text documents are often broken up into several sections and
         subsections. Each section is usually prefaced with a short title or
         heading that attempts to summarize the topic of the section it precedes.
-        For instance this paragraph is preceded by the heading Heading Tags. The
-        font of the section headings are usually larger and bolder than their
-        subsection headings. This document uses headings to introduce topics
-        such as HTML Documents, HTML Tags, Heading Tags, etc. HTML heading tags
-        can be used to format plain text so that it renders in a browser as
-        large headings. There are 6 heading tags for different sizes: h1, h2,
-        h3, h4, h5, and h6. Tag h1 is the largest heading and h6 is the smallest
-        heading. A <span id="wd-inline-span">span</span> sits in this sentence
-        without starting a new line.
+        For instance this paragraph is preceded by the heading Heading Tags.
+        HTML heading tags can be used to format plain text so that it renders in
+        a browser as large headings.
       </p>
-      <h1>h1</h1>
-      <h2>h2</h2>
-      <h3>h3</h3>
-      <h4>h4</h4>
-      <h5>h5</h5>
-      <h6>h6</h6>
-      {/* On your own: add a personal heading in wd-your-heading and a span with wd-your-span. */}
+
+      <h1>h1 heading</h1>
+      <h2>h2 heading</h2>
+      <h3>h3 heading</h3>
+      <h4>h4 heading</h4>
+      <h5>h5 heading</h5>
+      <h6>h6 heading</h6>
+
+      <h3 id="wd-your-heading">
+        My <span id="wd-your-span">web development</span> work
+      </h3>
+
       <div id="wd-ai-headings">
         <h4>Lab notes</h4>
         <h5>What I built</h5>

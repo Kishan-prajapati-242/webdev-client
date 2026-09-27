@@ -2,30 +2,35 @@ export default function ParagraphTag() {
   return (
     <div id="wd-p-tag">
       <h4>Paragraph Tag</h4>
+
       <p id="wd-p-1">
-        This is a paragraph. We often separate a long set of sentences with
-        vertical spaces to make the text easier to read. Browsers ignore
-        vertical white spaces and render all the text as one single set of
-        sentences. To force the browser to add vertical spacing, wrap the
-        paragraphs you want to separate with the paragraph tag.
+        This is a paragraph. We often separate long sets of sentences with
+        vertical spaces to make text easier to read.
       </p>
+
       <p>
-        This is the first paragraph. The paragraph tag is used to format
-        vertical gaps between long pieces of text like this one.
+        This is the first paragraph. The paragraph tag creates a separate block
+        of text.
       </p>
+
       <p>
-        This is the second paragraph. Even though there is a deliberate white
-        gap between the paragraph above and this paragraph, browsers would
-        otherwise render them together.
+        This is the second paragraph. Browsers add spacing between paragraph
+        elements.
       </p>
-      <p>
-        This is the third paragraph. Wrap each paragraph with the paragraph tag
-        to tell browsers to render the gaps.
+
+      <p id="wd-p-your-1">
+        I am taking Web Development to learn how real web applications are built
+        and deployed.
       </p>
-      {/* On your own: write two personal paragraphs with wd-p-your-1 and wd-p-your-2. */}
+
+      <p id="wd-p-your-2">
+        I like science fiction, especially Isaac Asimov, so I used that in my
+        personal examples.
+      </p>
+
       <p id="wd-ai-p">
-        Each p element is a separate block. The browser gives paragraphs default
-        margins, creating vertical space between them.
+        Wrapping text in p creates vertical spacing because each paragraph is a
+        block element with default browser margins.
       </p>
     </div>
   );

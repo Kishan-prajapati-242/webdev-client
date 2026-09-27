@@ -1,86 +1,50 @@
 export default function Tables() {
   return (
     <div id="wd-tables">
-      <h4>Table Tag</h4>
-      <table border={1} width="100%">
+      <h4>Tables</h4>
+
+      <table>
         <thead>
           <tr>
             <th>Quiz</th>
             <th>Topic</th>
-            <th>Date</th>
-            <th>Grade</th>
+            <th>Score</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Q1</td><td>HTML</td><td>90</td></tr>
+          <tr><td>Q2</td><td>CSS</td><td>85</td></tr>
+          <tr><td>Q3</td><td>JavaScript</td><td>92</td></tr>
+          <tr><td>Q4</td><td>React</td><td>88</td></tr>
+          <tr><td>Q5</td><td>Next.js</td><td>91</td></tr>
+          <tr><td>Q6</td><td>Routing</td><td>89</td></tr>
+          <tr><td>Q7</td><td>Forms</td><td>94</td></tr>
+          <tr><td>Q8</td><td>Tables</td><td>87</td></tr>
+          <tr><td>Q9</td><td>Images</td><td>93</td></tr>
+          <tr><td>Q10</td><td>Links</td><td>98</td></tr>
+          <tr><td colSpan={2}>Average</td><td>90.7</td></tr>
+        </tbody>
+      </table>
+
+      <h5>My table</h5>
+      <table id="wd-your-table">
+        <thead>
+          <tr>
+            <th>Book</th>
+            <th>Author</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>Q1</td>
-            <td align="center">HTML</td>
-            <td align="center">2/3/21</td>
-            <td align="right">85</td>
+            <td>Foundation</td>
+            <td>Isaac Asimov</td>
           </tr>
           <tr>
-            <td>Q2</td>
-            <td align="center">CSS</td>
-            <td align="center">2/10/21</td>
-            <td align="right">90</td>
-          </tr>
-          <tr>
-            <td>Q3</td>
-            <td align="center">JavaScript</td>
-            <td align="center">2/17/21</td>
-            <td align="right">95</td>
-          </tr>
-          <tr>
-            <td>Q4</td>
-            <td align="center">React</td>
-            <td align="center">2/24/21</td>
-            <td align="right">88</td>
-          </tr>
-          <tr>
-            <td>Q5</td>
-            <td align="center">Next.js</td>
-            <td align="center">3/3/21</td>
-            <td align="right">92</td>
-          </tr>
-          <tr>
-            <td>Q6</td>
-            <td align="center">Forms</td>
-            <td align="center">3/10/21</td>
-            <td align="right">91</td>
-          </tr>
-          <tr>
-            <td>Q7</td>
-            <td align="center">Routing</td>
-            <td align="center">3/17/21</td>
-            <td align="right">94</td>
-          </tr>
-          <tr>
-            <td>Q8</td>
-            <td align="center">Tables</td>
-            <td align="center">3/24/21</td>
-            <td align="right">89</td>
-          </tr>
-          <tr>
-            <td>Q9</td>
-            <td align="center">Images</td>
-            <td align="center">3/31/21</td>
-            <td align="right">93</td>
-          </tr>
-          <tr>
-            <td>Q10</td>
-            <td align="center">Deploy</td>
-            <td align="center">4/7/21</td>
-            <td align="right">90</td>
+            <td>I, Robot</td>
+            <td>Isaac Asimov</td>
           </tr>
         </tbody>
-        <tfoot>
-          <tr>
-            <th colSpan={3}>Average</th>
-            <td align="right">90.7</td>
-          </tr>
-        </tfoot>
       </table>
-      {/* On your own: add a second table with id wd-your-table. */}
     </div>
   );
 }
