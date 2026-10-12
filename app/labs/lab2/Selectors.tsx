@@ -6,7 +6,11 @@ export default function Selectors() {
         A style attribute affects this line directly.
       </p>
       <p id="wd-id-selector">This line is selected by its id.</p>
-      <p className="wd-class-selector">This line is selected by its class.</p>
+      <div id="wd-css-class-selectors">
+        <h3>Class selectors</h3>
+        <p className="wd-class-selector">This paragraph is selected by its class.</p>
+        <h4 className="wd-class-selector">The same class styles this heading.</h4>
+      </div>
       <div className="wd-structure-selector">
         <p>This paragraph is selected through its parent.</p>
         <div>

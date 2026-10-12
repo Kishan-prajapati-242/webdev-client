@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { notFound } from "next/navigation";
 import { assignments } from "../data";
 const field =
   "w-full rounded border border-neutral-300 bg-white px-3 py-2 text-sm";
@@ -9,8 +8,7 @@ export default async function AssignmentEditor({
   params: Promise<{ cid: string; aid: string }>;
 }) {
   const { cid, aid } = await params;
-  const assignment = assignments.find((item) => item.aid === aid);
-  if (!assignment) notFound();
+  const assignment = assignments.find((item) => item.aid === aid) ?? assignments[0];
   const back = `/courses/${cid}/assignments`;
   return (
     <div id="wd-assignments-editor" className="max-w-3xl">

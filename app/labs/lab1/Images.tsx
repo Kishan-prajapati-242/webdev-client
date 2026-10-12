@@ -1,19 +1,46 @@
 "use client";
 
+import { useEffect, useRef } from "react";
+
+function RemoteImage({ id, src, alt, fallback }: {
+  id: string;
+  src: string;
+  alt: string;
+  fallback: string;
+}) {
+  const ref = useRef<HTMLImageElement>(null);
+
+  useEffect(() => {
+    // An image may fail before hydration attaches the error handler.
+    const image = ref.current;
+    if (image?.complete && image.naturalWidth === 0) image.src = fallback;
+  }, [fallback]);
+
+  return (
+    <img
+      ref={ref}
+      id={id}
+      src={src}
+      alt={alt}
+      width={200}
+      onError={(event) => {
+        const image = event.currentTarget;
+        if (image.getAttribute("src") !== fallback) image.src = fallback;
+      }}
+    />
+  );
+}
+
 export default function Images() {
   return (
     <div id="wd-images">
       <h4>Images</h4>
 
-      <img
+      <RemoteImage
         id="wd-starship"
         src="https://www.starship.xyz/wp-content/uploads/2024/10/cities_07-1024x671.jpg"
         alt="Starship robot"
-        width={200}
-        onError={(event) => {
-          event.currentTarget.onerror = null;
-          event.currentTarget.src = "/images/starship-robot.svg";
-        }}
+        fallback="/images/starship-robot.svg"
       />
 
       <img
@@ -30,15 +57,11 @@ export default function Images() {
         width={160}
       />
 
-      <img
+      <RemoteImage
         id="wd-ai-image"
         src="https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Element/image/mdn_logo_only_color.png"
         alt="MDN logo"
-        width={200}
-        onError={(event) => {
-          event.currentTarget.onerror = null;
-          event.currentTarget.src = "/images/mdn-web-docs.svg";
-        }}
+        fallback="/images/mdn-web-docs.svg"
       />
     </div>
   );
