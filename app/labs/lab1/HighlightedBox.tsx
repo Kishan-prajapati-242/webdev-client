@@ -59,7 +59,14 @@ export default function HighlightedBoxLab() {
           A second box with different style props wrapping different content.
         </p>
       </HighlightedBox>
-      {/* On your own: add a HighlightedBox around your goals list. */}
+      <HighlightedBox backgroundColor="#fff7ed" borderColor="#ea580c">
+        <h4>My goals this semester</h4>
+        <ul>
+          <li>Build a cleaner full stack portfolio.</li>
+          <li>Keep improving my NLP research project.</li>
+          <li>Get ready for a software engineering co-op.</li>
+        </ul>
+      </HighlightedBox>
       <HighlightedBox backgroundColor="#dbeafe" borderColor="#2563eb">
         <h4>Sample nested tags</h4>
         <p>

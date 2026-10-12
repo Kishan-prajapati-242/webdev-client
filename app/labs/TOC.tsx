@@ -31,7 +31,7 @@ export default function TOC() {
         Kambaz
       </Link>
       <br />
-      <Link id="wd-toc-book-link" href="/book/ch1">
+      <Link id="wd-toc-book-link" href="https://kambaz.dev/book/ch1">
         Chapter 1
       </Link>
 

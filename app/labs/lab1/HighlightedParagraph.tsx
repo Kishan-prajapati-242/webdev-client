@@ -45,7 +45,12 @@ export default function HighlightedParagraphLab() {
         borderWidth="3px"
         borderRadius="0px"
       />
-      {/* On your own: add a HighlightedParagraph with your own text and colors. */}
+      <HighlightedParagraph
+        text="I am building a web app that turns medical jargon into language patients can understand."
+        backgroundColor="#dcfce7"
+        borderColor="#15803d"
+        borderRadius={10}
+      />
       <HighlightedParagraph
         text="Sample: review your HTML in the browser."
         backgroundColor="#e0e7ff"

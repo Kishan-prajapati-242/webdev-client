@@ -12,15 +12,30 @@ export default function CourseCard({
   image: string;
 }) {
   return (
-    <div className="wd-dashboard-course">
-      <Link className="wd-dashboard-course-link" href={`/courses/${id}/home`}>
-        <Image src={image} width={200} height={150} alt={title} />
-        <div>
-          <h5>{title}</h5>
-          <p className="wd-dashboard-course-title">{subtitle}</p>
-          <button type="button">Go</button>
+    <article className="wd-dashboard-course overflow-hidden rounded border border-neutral-300 bg-white shadow-sm">
+      <Link
+        className="wd-dashboard-course-link block text-neutral-800"
+        href={`/courses/${id}/home`}
+      >
+        <div className="flex h-36 items-center justify-center bg-neutral-100">
+          <Image
+            src={image}
+            width={170}
+            height={120}
+            alt=""
+            className="h-28 w-auto object-contain"
+          />
+        </div>
+        <div className="p-4">
+          <h3 className="m-0 text-lg font-semibold text-red-700">{title}</h3>
+          <p className="wd-dashboard-course-title mt-1 text-sm text-neutral-600">
+            {subtitle}
+          </p>
+          <span className="inline-block rounded border border-neutral-300 px-3 py-1 text-sm">
+            Go to course
+          </span>
         </div>
       </Link>
-    </div>
+    </article>
   );
 }

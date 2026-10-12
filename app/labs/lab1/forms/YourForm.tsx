@@ -93,7 +93,7 @@ export default function YourForm() {
         id="profile-email"
         name="email"
         type="email"
-        placeholder="your-northeastern-email@example.com"
+        defaultValue="prajapati.kish@northeastern.edu"
       />
       <br />
       <label htmlFor="profile-year">Graduation year</label>

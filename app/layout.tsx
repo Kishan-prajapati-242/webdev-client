@@ -3,7 +3,7 @@ import type { ReactNode } from "react";
 import "./globals.css";
 export const metadata: Metadata = {
   title: "Kishan Shaileshkumar Prajapati | Web Development",
-  description: "Chapter 1 Labs and Kambaz prototype",
+  description: "HTML, CSS, Tailwind, and Kambaz",
 };
 export default function RootLayout({
   children,

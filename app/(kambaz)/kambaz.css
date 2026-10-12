@@ -1,0 +1,47 @@
+@import "tailwindcss/theme" layer(theme);
+@import "tailwindcss/utilities" layer(utilities);
+
+#wd-kambaz {
+  font-family:
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    sans-serif;
+  color: #262626;
+  line-height: 1.5;
+}
+#wd-kambaz,
+#wd-kambaz * {
+  box-sizing: border-box;
+}
+#wd-kambaz a {
+  text-decoration: none;
+}
+#wd-kambaz button {
+  cursor: pointer;
+}
+#wd-kambaz input,
+#wd-kambaz textarea,
+#wd-kambaz select {
+  background: white;
+}
+.wd-main-content-offset {
+  margin-left: 84px;
+  min-width: 0;
+}
+.wd-nav-tile:hover,
+.wd-course-nav a:hover,
+.wd-account-nav a:hover {
+  background: #f5f5f5;
+}
+.wd-course-nav a.active,
+.wd-account-nav a.active {
+  color: #b91c1c;
+  border-left: 3px solid #b91c1c;
+  background: #fff7f7;
+}
+@media (max-width: 640px) {
+  .wd-main-content-offset {
+    margin-left: 68px;
+  }
+}
