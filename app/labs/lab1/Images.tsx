@@ -7,7 +7,7 @@ export default function Images() {
 
       <img
         id="wd-starship"
-        src="https://www.starship.xyz/static/robots/robot-front.png"
+        src="https://www.starship.xyz/wp-content/uploads/2024/10/cities_07-1024x671.jpg"
         alt="Starship robot"
         width={200}
         onError={(event) => {
@@ -32,7 +32,7 @@ export default function Images() {
 
       <img
         id="wd-ai-image"
-        src="https://developer.mozilla.org/mdn-social-share.cd6c4a5a.png"
+        src="https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Element/image/mdn_logo_only_color.png"
         alt="MDN logo"
         width={200}
         onError={(event) => {

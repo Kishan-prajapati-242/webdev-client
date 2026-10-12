@@ -39,7 +39,7 @@ export default function KambazNavigation() {
     <nav
       id="wd-kambaz-navigation"
       aria-label="Kambaz"
-      className="fixed inset-y-0 left-0 z-30 flex w-[84px] flex-col items-center bg-black text-white max-sm:w-[68px]"
+      className="fixed inset-y-0 left-0 z-30 hidden w-[112px] flex-col items-center bg-black text-white md:flex"
     >
       <a
         id="wd-neu-link"
@@ -49,17 +49,28 @@ export default function KambazNavigation() {
       >
         N
       </a>
-      {links.map(({ href, id, label, Icon }) => (
-        <Link
-          key={id}
-          id={id}
-          href={href}
-          className={`wd-nav-tile flex w-full flex-col items-center gap-1 px-1 py-3 text-center text-xs ${(pathname.startsWith(href) && href !== "/dashboard") || (href === "/dashboard" && pathname === href) ? "bg-white text-red-700" : "text-white"}`}
-        >
-          <Icon className="text-xl" aria-hidden="true" />
-          <span>{label}</span>
-        </Link>
-      ))}
+      {links.map(({ href, id, label, Icon }) => {
+        const active =
+          id === "wd-dashboard-link"
+            ? pathname === "/dashboard"
+            : id === "wd-course-link"
+              ? pathname.startsWith("/courses/")
+              : pathname.startsWith(href);
+        return (
+          <Link
+            key={id}
+            id={id}
+            href={href}
+            className={`wd-nav-tile flex w-full flex-col items-center gap-1 px-1 py-3 text-center text-xs ${active ? "bg-white text-red-700" : "text-white"}`}
+          >
+            <Icon
+              className={`text-xl ${active ? "text-red-700" : id === "wd-account-link" ? "text-white" : "text-red-500"}`}
+              aria-hidden="true"
+            />
+            <span>{label}</span>
+          </Link>
+        );
+      })}
       <Link
         id="wd-ai-nav-help"
         href="/labs"

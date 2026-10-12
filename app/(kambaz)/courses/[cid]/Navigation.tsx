@@ -29,6 +29,13 @@ export default function CourseNavigation({ cid }: { cid: string }) {
           {label}
         </Link>
       ))}
+      <Link
+        id="wd-course-ai-link"
+        href={`/courses/${cid}/home`}
+        className="border-l-3 border-transparent px-3 py-2 text-sm text-neutral-700"
+      >
+        Sample
+      </Link>
     </nav>
   );
 }

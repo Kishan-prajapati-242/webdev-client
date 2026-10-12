@@ -13,10 +13,10 @@ export default function ListTags() {
 
       <h5>My favorite recipe</h5>
       <ol id="wd-your-favorite-recipe">
-        <li>Toast bread until crisp.</li>
-        <li>Add butter while it is warm.</li>
-        <li>Add eggs or another topping.</li>
-        <li>Eat it with coffee.</li>
+        <li>Peel and cut a sweet potato into chunks.</li>
+        <li>Boil the pieces until they are soft.</li>
+        <li>Drain the water and add a little salt.</li>
+        <li>Eat it warm.</li>
       </ol>
 
       <h5>Favorite books</h5>

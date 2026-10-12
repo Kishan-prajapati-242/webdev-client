@@ -3,15 +3,20 @@ import {
   FaCalendarAlt,
   FaChartBar,
   FaCloudUploadAlt,
+  FaHome,
   FaRegBell,
+  FaStream,
 } from "react-icons/fa";
 export default function CourseStatus() {
   const actions = [
-    [FaRegBell, "View Course Notifications"],
-    [FaChartBar, "View Course Analytics"],
-    [FaBullhorn, "View Course Announcements"],
-    [FaCalendarAlt, "View Course Calendar"],
     [FaCloudUploadAlt, "Import Existing Content"],
+    [FaCloudUploadAlt, "Import from Commons"],
+    [FaHome, "Choose Home Page"],
+    [FaStream, "View Course Stream"],
+    [FaBullhorn, "New Announcement"],
+    [FaChartBar, "New Analytics"],
+    [FaRegBell, "View Course Notifications"],
+    [FaCalendarAlt, "View Course Calendar"],
   ] as const;
   return (
     <aside
@@ -44,6 +49,13 @@ export default function CourseStatus() {
             {label}
           </button>
         ))}
+        <button
+          id="wd-ai-status"
+          type="button"
+          className="flex items-center gap-2 rounded border border-neutral-300 bg-neutral-50 px-3 py-2 text-left text-sm"
+        >
+          <FaChartBar className="text-neutral-500" /> Sample action
+        </button>
       </div>
     </aside>
   );

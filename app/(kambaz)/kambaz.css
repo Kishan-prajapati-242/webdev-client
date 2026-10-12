@@ -14,8 +14,10 @@
 #wd-kambaz * {
   box-sizing: border-box;
 }
-#wd-kambaz a {
-  text-decoration: none;
+@layer base {
+  #wd-kambaz a {
+    text-decoration: none;
+  }
 }
 #wd-kambaz button {
   cursor: pointer;
@@ -26,13 +28,13 @@
   background: white;
 }
 .wd-main-content-offset {
-  margin-left: 84px;
   min-width: 0;
 }
 .wd-nav-tile:hover,
 .wd-course-nav a:hover,
 .wd-account-nav a:hover {
   background: #f5f5f5;
+  color: #b91c1c;
 }
 .wd-course-nav a.active,
 .wd-account-nav a.active {
@@ -40,8 +42,8 @@
   border-left: 3px solid #b91c1c;
   background: #fff7f7;
 }
-@media (max-width: 640px) {
+@media (min-width: 768px) {
   .wd-main-content-offset {
-    margin-left: 68px;
+    margin-left: 112px;
   }
 }

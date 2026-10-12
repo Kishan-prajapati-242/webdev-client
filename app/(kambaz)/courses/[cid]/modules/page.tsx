@@ -69,7 +69,7 @@ export default function Modules() {
             <li className="wd-content-item">CSS Styling</li>
           </Lesson>
         </Module>
-        <Module title="Week 4 — Sample layout">
+        <Module title="Week 4 — Responsive design">
           <Lesson title="READING">
             <li className="wd-content-item">Responsive design with CSS Grid</li>
           </Lesson>

@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { notFound } from "next/navigation";
+import { assignments } from "../data";
 const field =
   "w-full rounded border border-neutral-300 bg-white px-3 py-2 text-sm";
 export default async function AssignmentEditor({
@@ -6,7 +8,9 @@ export default async function AssignmentEditor({
 }: {
   params: Promise<{ cid: string; aid: string }>;
 }) {
-  const { cid } = await params;
+  const { cid, aid } = await params;
+  const assignment = assignments.find((item) => item.aid === aid);
+  if (!assignment) notFound();
   const back = `/courses/${cid}/assignments`;
   return (
     <div id="wd-assignments-editor" className="max-w-3xl">
@@ -19,7 +23,7 @@ export default async function AssignmentEditor({
           <input
             id="wd-name"
             className={field}
-            defaultValue="A1 - ENV + HTML"
+            defaultValue={assignment.title}
           />
         </div>
         <div>
@@ -30,7 +34,7 @@ export default async function AssignmentEditor({
             id="wd-description"
             rows={5}
             className={field}
-            defaultValue="The assignment is available online. Submit a link to your Vercel application."
+            defaultValue={assignment.description}
           />
         </div>
         <div className="grid gap-4 sm:grid-cols-2">
@@ -42,7 +46,7 @@ export default async function AssignmentEditor({
               id="wd-points"
               type="number"
               className={field}
-              defaultValue={100}
+              defaultValue={assignment.points}
             />
           </div>
           <div>
@@ -144,10 +148,7 @@ export default async function AssignmentEditor({
           </div>
         </fieldset>
         <div>
-          <label
-            htmlFor="wd-ai-editor-notes"
-            className="mb-1 block font-medium"
-          >
+          <label htmlFor="wd-ai-editor-notes" className="mb-1 block font-medium">
             Sample notes
           </label>
           <textarea

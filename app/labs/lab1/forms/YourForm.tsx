@@ -17,7 +17,7 @@ export default function YourForm() {
         id="profile-password"
         name="password"
         type="password"
-        placeholder="Enter a sample password"
+        placeholder="Enter a password"
       />
       <br />
       <label htmlFor="profile-bio">Bio</label>

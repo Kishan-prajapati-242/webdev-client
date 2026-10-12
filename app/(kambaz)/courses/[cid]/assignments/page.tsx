@@ -1,5 +1,6 @@
 import { FaPlus, FaSearch } from "react-icons/fa";
 import AssignmentItem from "./AssignmentItem";
+import { assignments } from "./data";
 export default async function Assignments({
   params,
 }: {
@@ -41,36 +42,15 @@ export default async function Assignments({
         ASSIGNMENTS 40% of Total
       </h2>
       <ul id="wd-assignment-list" className="m-0 list-none p-0">
-        <AssignmentItem
-          cid={cid}
-          aid="A101"
-          title="A1 - ENV + HTML"
-          details="Multiple Modules | Due Sep 27 at 11:59pm | 100 pts"
-        />
-        <AssignmentItem
-          cid={cid}
-          aid="A102"
-          title="A2 - CSS + TAILWIND"
-          details="Multiple Modules | Due Oct 11 at 11:59pm | 100 pts"
-        />
-        <AssignmentItem
-          cid={cid}
-          aid="A103"
-          title="A3 - JAVASCRIPT + REACT"
-          details="Multiple Modules | Due Oct 25 at 11:59pm | 100 pts"
-        />
-        <AssignmentItem
-          cid={cid}
-          aid="A104"
-          title="A4 - My full stack portfolio"
-          details="Multiple Modules | Due Nov 8 at 11:59pm | 100 pts"
-        />
-        <AssignmentItem
-          cid={cid}
-          aid="ai-a"
-          title="A9 - Sample assignment"
-          details="Multiple Modules | Due Dec 1 at 11:59pm | 100 pts"
-        />
+        {assignments.map(({ aid, title, details }) => (
+          <AssignmentItem
+            key={aid}
+            cid={cid}
+            aid={aid}
+            title={title}
+            details={details}
+          />
+        ))}
       </ul>
     </div>
   );
