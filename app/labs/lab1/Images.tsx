@@ -1,3 +1,5 @@
+"use client";
+
 export default function Images() {
   return (
     <div id="wd-images">
@@ -8,6 +10,10 @@ export default function Images() {
         src="https://www.starship.xyz/static/robots/robot-front.png"
         alt="Starship robot"
         width={200}
+        onError={(event) => {
+          event.currentTarget.onerror = null;
+          event.currentTarget.src = "/images/starship-robot.svg";
+        }}
       />
 
       <img
@@ -29,6 +35,10 @@ export default function Images() {
         src="https://developer.mozilla.org/mdn-social-share.cd6c4a5a.png"
         alt="MDN logo"
         width={200}
+        onError={(event) => {
+          event.currentTarget.onerror = null;
+          event.currentTarget.src = "/images/mdn-web-docs.svg";
+        }}
       />
     </div>
   );

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="220" height="200" viewBox="0 0 220 200" role="img" aria-label="Delivery robot illustration">
+  <rect width="220" height="200" fill="#edf3f8"/>
+  <path d="M25 156h170" stroke="#bbcbd5" stroke-width="3"/>
+  <rect x="39" y="82" width="141" height="63" rx="17" fill="#f8fafc" stroke="#607789" stroke-width="4"/>
+  <path d="M48 81l18-29h97l12 29" fill="#dce8ef" stroke="#607789" stroke-width="4" stroke-linejoin="round"/>
+  <rect x="77" y="63" width="68" height="17" rx="6" fill="#283d4d"/>
+  <circle cx="98" cy="71" r="3" fill="#8ed7e4"/>
+  <circle cx="124" cy="71" r="3" fill="#8ed7e4"/>
+  <path d="M111 52V36" stroke="#607789" stroke-width="4"/>
+  <circle cx="111" cy="33" r="5" fill="#e66c55"/>
+  <circle cx="65" cy="146" r="13" fill="#283d4d"/>
+  <circle cx="110" cy="146" r="13" fill="#283d4d"/>
+  <circle cx="155" cy="146" r="13" fill="#283d4d"/>
+  <circle cx="65" cy="146" r="5" fill="#9db7c4"/>
+  <circle cx="110" cy="146" r="5" fill="#9db7c4"/>
+  <circle cx="155" cy="146" r="5" fill="#9db7c4"/>
+  <text x="110" y="185" text-anchor="middle" fill="#283d4d" font-family="Arial, sans-serif" font-size="14">Delivery robot</text>
+</svg>
