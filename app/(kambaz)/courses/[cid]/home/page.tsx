@@ -1,14 +1,7 @@
-import Modules from "../modules/page";
-import CourseStatus from "./Status";
-export default function Home() {
-  return (
-    <div id="wd-home" className="flex gap-5">
-      <div className="min-w-0 flex-1">
-        <Modules />
-      </div>
-      <div className="hidden w-72 shrink-0 lg:block">
-        <CourseStatus />
-      </div>
-    </div>
-  );
+import Link from "next/link";
+import * as db from "../../../database";
+export default async function CourseHome({params}:{params:Promise<{cid:string}>}){
+ const {cid}=await params;const course=db.courses.find(c=>c._id===cid);
+ const modules=db.modules.filter(m=>m.course===cid);
+ return <div id="wd-home"><h2>Welcome to {course?.name}</h2><p>{course?.description}</p><p>Term: {course?.term}</p><h3>Course Modules</h3><ul>{modules.map(m=><li key={m._id}>{m.name}</li>)}</ul><p><Link className="wd-a3-btn" href={`/courses/${cid}/modules`}>View Modules</Link></p></div>;
 }

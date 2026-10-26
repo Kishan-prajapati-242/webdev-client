@@ -1,57 +1,8 @@
-import { FaPlus, FaSearch } from "react-icons/fa";
-import AssignmentItem from "./AssignmentItem";
-import { assignments } from "./data";
-export default async function Assignments({
-  params,
-}: {
-  params: Promise<{ cid: string }>;
-}) {
-  const { cid } = await params;
-  return (
-    <div id="wd-assignments">
-      <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
-        <div className="relative">
-          <FaSearch className="absolute top-1/2 left-3 -translate-y-1/2 text-neutral-500" />
-          <input
-            id="wd-search-assignment"
-            placeholder="Search for Assignments"
-            className="rounded border border-neutral-300 py-2 pr-3 pl-9 text-sm"
-          />
-        </div>
-        <div className="flex gap-2">
-          <button
-            id="wd-add-assignment-group"
-            type="button"
-            className="flex items-center gap-1 rounded border border-neutral-300 px-3 py-2 text-sm"
-          >
-            <FaPlus /> Group
-          </button>
-          <button
-            id="wd-add-assignment"
-            type="button"
-            className="flex items-center gap-1 rounded bg-red-600 px-3 py-2 text-sm text-white"
-          >
-            <FaPlus /> Assignment
-          </button>
-        </div>
-      </div>
-      <h2
-        id="wd-assignments-title"
-        className="m-0 rounded bg-neutral-200 p-3 text-lg font-semibold"
-      >
-        ASSIGNMENTS 40% of Total
-      </h2>
-      <ul id="wd-assignment-list" className="m-0 list-none p-0">
-        {assignments.map(({ aid, title, details }) => (
-          <AssignmentItem
-            key={aid}
-            cid={cid}
-            aid={aid}
-            title={title}
-            details={details}
-          />
-        ))}
-      </ul>
-    </div>
-  );
+import Link from "next/link";
+import * as db from "../../../database";
+export default async function Assignments({params}:{params:Promise<{cid:string}>}){
+ const {cid}=await params;const assignments=db.assignments.filter(a=>a.course===cid);
+ return <div id="wd-assignments"><div className="wd-a3-toolbar"><input id="wd-search-assignment" aria-label="Search for Assignments" placeholder="Search for Assignments"/><span className="wd-a3-btn">+ Assignment</span></div><h2 id="wd-assignments-title">Assignments</h2>
+ <ul className="wd-a3-assignments" id="wd-assignment-list">{assignments.map(assignment=><li key={assignment._id} className="wd-assignment-item"><Link href={`/courses/${cid}/assignments/${assignment._id}`}><strong>{assignment.title}</strong><span className="wd-details">Multiple Modules | Available {assignment.available} | Due {assignment.due} | {assignment.points} pts</span></Link></li>)}</ul>
+ {assignments.length===0&&<p className="wd-a3-empty">No assignments.</p>}</div>;
 }

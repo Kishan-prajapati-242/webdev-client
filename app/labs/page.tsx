@@ -1,46 +1,6 @@
 import Link from "next/link";
-
-export default function Labs() {
-  return (
-    <main id="wd-labs">
-      <h1>Labs</h1>
-      <p>
-        <strong>Kishan Shaileshkumar Prajapati</strong>
-      </p>
-
-      <ul>
-        <li>
-          <Link href="/labs/lab1">Lab 1: HTML Examples</Link>
-        </li>
-        <li>
-          <Link href="/labs/lab2">Lab 2: CSS Basics</Link>
-        </li>
-        <li>
-          <Link href="/labs/lab3">Lab 3: JavaScript Fundamentals</Link>
-        </li>
-        <li>
-          <Link id="wd-lab4-link" href="/labs/lab4">
-            Lab 4
-          </Link>
-        </li>
-        <li>
-          <Link href="/labs/lab5">Lab 5</Link>
-        </li>
-        <li>
-          <Link id="wd-kambaz-link" href="/">
-            Kambaz
-          </Link>
-        </li>
-      </ul>
-
-      <p>
-        <a
-          id="wd-github"
-          href="https://github.com/Kishan-prajapati-242/webdev-client"
-        >
-          My public GitHub repository
-        </a>
-      </p>
-    </main>
-  );
-}
+export default function Labs(){return <main id="wd-labs" style={{padding:"28px",maxWidth:940,fontFamily:"Arial,system-ui,sans-serif"}}>
+<h1>Labs</h1><p id="wd-labs-student-name">Kishan Shaileshkumar Prajapati</p>
+<p>GitHub: <a id="wd-github" href="https://github.com/Kishan-prajapati-242/webdev-client" target="_blank" rel="noreferrer">Kishan-prajapati-242/webdev-client</a></p>
+<h2>Course Labs</h2><ul><li><Link href="/labs/lab1">Lab 1 — HTML</Link></li><li><Link href="/labs/lab2">Lab 2 — CSS and Tailwind</Link></li><li><Link href="/labs/lab3">Lab 3 — JavaScript</Link></li><li><Link href="/dashboard">Kambaz</Link></li></ul>
+</main>}

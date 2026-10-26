@@ -1,0 +1,266 @@
+[
+  {
+    "_id": "M101",
+    "name": "Introduction to Rocket Propulsion",
+    "description": "Introduction to Rocket Propulsion lessons",
+    "course": "RS101",
+    "lessons": [
+      {
+        "_id": "M101-L1",
+        "name": "Overview of Rocket Propulsion",
+        "description": "Overview of Rocket Propulsion",
+        "module": "M101"
+      },
+      {
+        "_id": "M101-L2",
+        "name": "Rocket Engine Types",
+        "description": "Rocket Engine Types",
+        "module": "M101"
+      },
+      {
+        "_id": "M101-L3",
+        "name": "Propulsion Calculations",
+        "description": "Propulsion Calculations",
+        "module": "M101"
+      },
+      {
+        "_id": "M101-L4",
+        "name": "Kishan: Propulsion Design Notes",
+        "description": "Kishan: Propulsion Design Notes",
+        "module": "M101"
+      }
+    ]
+  },
+  {
+    "_id": "M102",
+    "name": "Fuel and Combustion",
+    "description": "Fuel and Combustion lessons",
+    "course": "RS101",
+    "lessons": [
+      {
+        "_id": "M102-L1",
+        "name": "Liquid Fuel",
+        "description": "Liquid Fuel",
+        "module": "M102"
+      },
+      {
+        "_id": "M102-L2",
+        "name": "Solid Propellants",
+        "description": "Solid Propellants",
+        "module": "M102"
+      },
+      {
+        "_id": "M102-L3",
+        "name": "Combustion Chamber",
+        "description": "Combustion Chamber",
+        "module": "M102"
+      },
+      {
+        "_id": "M102-L4",
+        "name": "Nozzle Design",
+        "description": "Nozzle Design",
+        "module": "M102"
+      }
+    ]
+  },
+  {
+    "_id": "M103",
+    "name": "Rocket Engine Systems",
+    "description": "Rocket Engine Systems lessons",
+    "course": "RS101",
+    "lessons": [
+      {
+        "_id": "M103-L1",
+        "name": "Thrust",
+        "description": "Thrust",
+        "module": "M103"
+      },
+      {
+        "_id": "M103-L2",
+        "name": "Engine Testing",
+        "description": "Engine Testing",
+        "module": "M103"
+      }
+    ]
+  },
+  {
+    "_id": "M201",
+    "name": "Fundamentals of Aerodynamics",
+    "description": "Fundamentals of Aerodynamics lessons",
+    "course": "RS102",
+    "lessons": [
+      {
+        "_id": "M201-L1",
+        "name": "Fluid Flow",
+        "description": "Fluid Flow",
+        "module": "M201"
+      },
+      {
+        "_id": "M201-L2",
+        "name": "Lift and Drag",
+        "description": "Lift and Drag",
+        "module": "M201"
+      }
+    ]
+  },
+  {
+    "_id": "M202",
+    "name": "Airfoil Design",
+    "description": "Airfoil Design lessons",
+    "course": "RS102",
+    "lessons": [
+      {
+        "_id": "M202-L1",
+        "name": "Wing Profiles",
+        "description": "Wing Profiles",
+        "module": "M202"
+      },
+      {
+        "_id": "M202-L2",
+        "name": "Wind Tunnel Testing",
+        "description": "Wind Tunnel Testing",
+        "module": "M202"
+      }
+    ]
+  },
+  {
+    "_id": "M203",
+    "name": "Aircraft Dynamics",
+    "description": "Aircraft Dynamics lessons",
+    "course": "RS102",
+    "lessons": [
+      {
+        "_id": "M203-L1",
+        "name": "Stability",
+        "description": "Stability",
+        "module": "M203"
+      },
+      {
+        "_id": "M203-L2",
+        "name": "Performance",
+        "description": "Performance",
+        "module": "M203"
+      }
+    ]
+  },
+  {
+    "_id": "M301",
+    "name": "Spacecraft Systems",
+    "description": "Spacecraft Systems lessons",
+    "course": "RS103",
+    "lessons": [
+      {
+        "_id": "M301-L1",
+        "name": "Mission Objectives",
+        "description": "Mission Objectives",
+        "module": "M301"
+      },
+      {
+        "_id": "M301-L2",
+        "name": "Mass Budget",
+        "description": "Mass Budget",
+        "module": "M301"
+      }
+    ]
+  },
+  {
+    "_id": "M302",
+    "name": "Orbital Mechanics",
+    "description": "Orbital Mechanics lessons",
+    "course": "RS103",
+    "lessons": [
+      {
+        "_id": "M302-L1",
+        "name": "Kepler Orbits",
+        "description": "Kepler Orbits",
+        "module": "M302"
+      },
+      {
+        "_id": "M302-L2",
+        "name": "Maneuvers",
+        "description": "Maneuvers",
+        "module": "M302"
+      }
+    ]
+  },
+  {
+    "_id": "M303",
+    "name": "Subsystems",
+    "description": "Subsystems lessons",
+    "course": "RS103",
+    "lessons": [
+      {
+        "_id": "M303-L1",
+        "name": "Thermal Control",
+        "description": "Thermal Control",
+        "module": "M303"
+      },
+      {
+        "_id": "M303-L2",
+        "name": "Attitude Control",
+        "description": "Attitude Control",
+        "module": "M303"
+      }
+    ]
+  },
+  {
+    "_id": "M401",
+    "name": "Organic Molecules",
+    "description": "Organic Molecules lessons",
+    "course": "RS104",
+    "lessons": [
+      {
+        "_id": "M401-L1",
+        "name": "Bonding",
+        "description": "Bonding",
+        "module": "M401"
+      },
+      {
+        "_id": "M401-L2",
+        "name": "Functional Groups",
+        "description": "Functional Groups",
+        "module": "M401"
+      }
+    ]
+  },
+  {
+    "_id": "M402",
+    "name": "Reactions",
+    "description": "Reactions lessons",
+    "course": "RS104",
+    "lessons": [
+      {
+        "_id": "M402-L1",
+        "name": "Substitution",
+        "description": "Substitution",
+        "module": "M402"
+      },
+      {
+        "_id": "M402-L2",
+        "name": "Elimination",
+        "description": "Elimination",
+        "module": "M402"
+      }
+    ]
+  },
+  {
+    "_id": "M403",
+    "name": "Laboratory",
+    "description": "Laboratory lessons",
+    "course": "RS104",
+    "lessons": [
+      {
+        "_id": "M403-L1",
+        "name": "Spectroscopy",
+        "description": "Spectroscopy",
+        "module": "M403"
+      },
+      {
+        "_id": "M403-L2",
+        "name": "Safety",
+        "description": "Safety",
+        "module": "M403"
+      }
+    ]
+  }
+]

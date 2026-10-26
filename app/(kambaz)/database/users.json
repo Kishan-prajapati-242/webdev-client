@@ -1,0 +1,58 @@
+[
+  {
+    "_id": "123",
+    "firstName": "Ada",
+    "lastName": "Lovelace",
+    "username": "ada",
+    "role": "STUDENT",
+    "email": "ada@example.edu"
+  },
+  {
+    "_id": "234",
+    "firstName": "Alan",
+    "lastName": "Turing",
+    "username": "alan",
+    "role": "STUDENT",
+    "email": "alan@example.edu"
+  },
+  {
+    "_id": "345",
+    "firstName": "Grace",
+    "lastName": "Hopper",
+    "username": "grace",
+    "role": "STUDENT",
+    "email": "grace@example.edu"
+  },
+  {
+    "_id": "456",
+    "firstName": "Kishan",
+    "lastName": "Prajapati",
+    "username": "kishan",
+    "role": "STUDENT",
+    "email": "prajapati.kish@northeastern.edu"
+  },
+  {
+    "_id": "567",
+    "firstName": "Thor",
+    "lastName": "Odinson",
+    "username": "thor",
+    "role": "STUDENT",
+    "email": "thor@example.edu"
+  },
+  {
+    "_id": "678",
+    "firstName": "Katherine",
+    "lastName": "Johnson",
+    "username": "katherine",
+    "role": "STUDENT",
+    "email": "katherine@example.edu"
+  },
+  {
+    "_id": "789",
+    "firstName": "Linus",
+    "lastName": "Torvalds",
+    "username": "linus",
+    "role": "STUDENT",
+    "email": "linus@example.edu"
+  }
+]
