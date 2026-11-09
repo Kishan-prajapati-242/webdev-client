@@ -80,13 +80,44 @@ export function ObjectState() {
   </DemoSection>;
 }
 export function ArrayState() {
-  const [items, setItems] = useState(["Learn React", "Study Zustand", "Finish A4"]);
-  const [draft, setDraft] = useState("");
-  const add = () => { if (draft.trim()) setItems((old) => [...old, draft.trim()]); setDraft(""); };
-  return <DemoSection title="Array state"><div className="wd-a4-inline">
-    <input aria-label="New array item" placeholder="New item" value={draft} onChange={(e) => setDraft(e.target.value)} />
-    <button type="button" onClick={add}>Add</button><button type="button" onClick={() => setItems([])}>Clear</button>
-  </div><ul className="wd-a4-list">{items.map((item, index) => <li key={`${item}-${index}`}><span>{item}</span><button type="button" onClick={() => setItems((old) => old.filter((_, i) => i !== index))}>Delete</button></li>)}</ul></DemoSection>;
+  const initialNumbers = [1, 2, 3, 4, 5];
+  const [array, setArray] = useState(initialNumbers);
+
+  const addElement = () => {
+    setArray((previous) => [...previous, Math.floor(Math.random() * 100)]);
+  };
+  const deleteElement = (index: number) => {
+    setArray((previous) => previous.filter((_, i) => i !== index));
+  };
+
+  return (
+    <DemoSection title="Array state">
+      <div id="wd-array-state-variables">
+        <div className="wd-a4-inline">
+          <button type="button" id="wd-add-element-click" onClick={addElement}>
+            Add Element
+          </button>
+          <button type="button" id="wd-clear-array-click" onClick={() => setArray([1, 2, 3, 4, 5])}>
+            Clear
+          </button>
+        </div>
+        <ul className="wd-a4-list">
+          {array.map((item, index) => (
+            <li key={`${item}-${index}`}>
+              <span>{item}</span>
+              <button
+                type="button"
+                id={`wd-delete-element-${index}-click`}
+                onClick={() => deleteElement(index)}
+              >
+                Delete
+              </button>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </DemoSection>
+  );
 }
 export function ProfileForm() {
   const [profile, setProfile] = useState({ firstName: "", lastName: "", email: "", birthDate: "", newsletter: false });
