@@ -1,44 +1,25 @@
+"use client";
+import { useState, type FormEvent } from "react";
 import Link from "next/link";
-const field = "mb-3 w-full rounded border border-neutral-300 px-3 py-2";
+import { useRouter } from "next/navigation";
+import { useAccount } from "../AccountContext";
 export default function Signin() {
-  return (
-    <div id="wd-signin-screen" className="max-w-sm">
-      <h1 className="mb-4 text-2xl font-semibold">Sign in</h1>
-      <input
-        placeholder="username"
-        aria-label="Username"
-        className={`wd-username ${field}`}
-        defaultValue="ada"
-      />
-      <input
-        placeholder="password"
-        aria-label="Password"
-        type="password"
-        className={`wd-password ${field}`}
-        defaultValue="123"
-      />
-      <label htmlFor="wd-ai-signin-note" className="mb-1 block text-sm">
-        Sample note
-      </label>
-      <input
-        id="wd-ai-signin-note"
-        placeholder="sample note"
-        className={field}
-      />
-      <Link
-        href="/dashboard"
-        id="wd-signin-btn"
-        className="mb-3 block rounded bg-blue-600 px-3 py-2 text-center text-white"
-      >
-        Sign in
-      </Link>
-      <Link
-        href="/account/signup"
-        id="wd-signup-link"
-        className="text-blue-700"
-      >
-        Sign up
-      </Link>
-    </div>
-  );
+  const [username, setUsername] = useState("ada");
+  const [password, setPassword] = useState("123");
+  const [error, setError] = useState("");
+  const { signin } = useAccount();
+  const router = useRouter();
+  function submit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    if (!signin(username, password)) { setError("Username or password is incorrect."); return; }
+    setError(""); router.push("/dashboard");
+  }
+  return <form id="wd-signin-screen" className="wd-a4-account-form" onSubmit={submit}>
+    <h1>Sign in</h1>
+    <label>Username<input className="wd-username" aria-label="Username" placeholder="username" autoComplete="username" value={username} onChange={(e) => setUsername(e.target.value)} /></label>
+    <label>Password<input className="wd-password" type="password" aria-label="Password" placeholder="password" autoComplete="current-password" value={password} onChange={(e) => setPassword(e.target.value)} /></label>
+    {error && <p role="alert" className="wd-a4-error">{error}</p>}
+    <button id="wd-signin-btn" className="wd-a3-btn" type="submit">Sign in</button>
+    <p><Link id="wd-signup-link" href="/account/signup">Sign up</Link></p>
+  </form>;
 }

@@ -1,0 +1,34 @@
+/* A4 additions extend the A3 appearance without changing earlier Lab pages. */
+.wd-a4-header,.wd-a4-actions{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.wd-a4-actions{justify-content:flex-start}
+.wd-a4-course-form{border:1px solid #dde2e9;border-radius:9px;background:#fff;padding:20px 23px;margin:18px 0 26px;box-shadow:0 3px 10px #19223409}
+.wd-a4-course-form h2{margin:0 0 16px;font-size:20px}
+.wd-a4-form-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(195px,1fr));gap:14px;margin-bottom:15px}
+.wd-a4-form-grid label,.wd-a4-account-form label{display:flex;flex-direction:column;gap:6px;font-size:13px;color:#465264;font-weight:600}
+.wd-a4-form-grid input,.wd-a4-form-grid textarea,.wd-a4-form-grid select,.wd-a4-account-form input,.wd-a4-account-form select,.wd-a4-actions select{padding:9px 11px;border:1px solid #bac5d1;border-radius:6px;font:inherit;background:#fff;color:#222;max-width:100%}
+.wd-a4-form-grid textarea{min-height:44px;resize:vertical}
+.wd-a3-btn:disabled,.wd-a4-actions button:disabled{opacity:.5;cursor:not-allowed}
+.wd-a3-btn.danger{background:#b4232c;color:#fff!important}
+.wd-a3-btn.success{background:#137b42;color:#fff!important}
+.wd-a4-error{color:#b4232c;font-size:13px;font-weight:600;margin:9px 0}
+.wd-a4-card-actions{padding:0 14px 14px;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.wd-a4-card-actions .wd-a3-btn{font-size:12px;padding:7px 11px}
+.wd-a4-nav-toggle{background:transparent;color:#545d6c;border:0;padding:8px 0;cursor:pointer;margin-bottom:9px;font-size:13px}
+.wd-a4-nav-collapsed{grid-template-columns:1fr}
+.wd-a4-module-heading{display:flex;align-items:center;justify-content:space-between;background:#ededee;border-bottom:1px solid #d5d7dc;gap:12px}
+.wd-a4-module-heading h3{flex:1;border:0!important}
+.wd-a4-module-actions{display:flex;align-items:center;gap:8px;padding:0 12px}
+.wd-a4-module-actions button{display:grid;place-items:center;width:30px;height:30px;border:1px solid #c4cbd4;border-radius:5px;background:#fff;color:#364152;cursor:pointer}
+.wd-a4-module-actions button:hover{color:#ac1d27;border-color:#ac1d27}
+.wd-a4-assignment-row{display:flex;align-items:center;justify-content:space-between;gap:8px;padding-right:14px}
+.wd-a4-assignment-row a{flex:1;min-width:0}
+.wd-a4-account-form{background:#fff;border:1px solid #dce2e9;border-radius:8px;padding:23px;max-width:480px;display:flex;flex-direction:column;gap:14px}
+.wd-a4-account-form.wide{max-width:700px}
+.wd-a4-account-form h1{font-size:25px;font-weight:700;margin-bottom:2px}
+.wd-a4-account-form .wd-a3-btn{align-self:flex-start}
+.wd-a4-account-form a{color:#b71e26;text-decoration:underline}
+.wd-a4-account-form .wd-a4-form-grid{margin:4px 0 0}
+.wd-a4-account-form .wd-a4-form-grid label{min-width:0}
+.wd-a4-account-form label input{width:100%}
+.wd-a4-card-actions button:focus-visible,.wd-a4-module-actions button:focus-visible,.wd-a3-btn:focus-visible,.wd-a4-nav-toggle:focus-visible{outline:3px solid #f6b353;outline-offset:2px}
+@media(max-width:700px){.wd-a4-course-form{padding:16px}.wd-a4-form-grid{grid-template-columns:1fr}.wd-a4-assignment-row{flex-direction:column;align-items:stretch;padding:0 12px 12px}.wd-a4-assignment-row a{padding:12px 4px}.wd-a4-card-actions{justify-content:flex-start}}
